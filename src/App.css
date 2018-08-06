@@ -1,0 +1,261 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+margin-left: -32px;
+  z-index: -1; position:relative;
+
+}
+
+.backdrop{
+  height: 1200px;
+  width: 100%;
+  background-image: url(./images/war_rush_backdrop.jpg);
+  color: white;
+  background-size: cover;
+  z-index: -10; position:relative;
+}
+
+@font-face {
+  font-family: "Ava-font";
+  src: url('/images/AvaMeridian.otf') format("truetype");
+}
+
+.oddrow{
+  display: flex;
+  flex-direction: row;
+  width: 49088px;
+  height: 64px;
+  flex-wrap: nowrap;
+  margin-top: -17px;
+
+}
+.app-overlay{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  margin-left: -32px;
+  z-index: 3; position:relative;
+}
+
+
+.oddrow-overlay{
+  display: flex;
+  flex-direction: row;
+  width: 49088px;
+  height: 64px;
+  flex-wrap: nowrap;
+  margin-top: -18px;
+}
+
+.evenrow{
+  display: flex;
+  flex-direction: row;
+  width: 49024px;
+  height: 64px;
+  flex-wrap: nowrap;
+  margin-top: -16px;
+  margin-left: 96px;
+
+}
+.box{
+  background-image: url(./images/Hex_Temp.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: chartreuse
+}
+
+#menu {
+  background-color: darkolivegreen;
+  background-image: url(./images/geomancer.jpeg);
+  font: Ava-font;
+  color :white;
+  display:flex;
+  position :fixed;
+  width: 100%;
+  height: 64px; 
+  border-style: groove;
+
+}
+
+#menu div {
+  padding :10px;
+  font-size: 24px;
+  align-self: center;
+}
+
+#footer {
+  background-image: url(./images/geomancer.jpeg);
+  color: white;
+  position :fixed;
+  left :0;
+  bottom :0;
+  height: 32px;
+  width :100%;
+  text-align: center;
+  padding : 10px;
+}
+
+.right-cap{
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 100%;
+  background-color: darkolivegreen;
+  z-index: 3; position:relative;
+}
+
+.active {
+  background-color :red; 
+}
+
+a {
+  text-decoration: none;
+  color :white;
+}
+
+.cap{
+  background-image: url(./images/Hex_Ocean_1.png);
+  display: flex;
+  height: 128px;
+  width: 64px;
+  border-style:none;
+
+}
+
+.oddcap{
+  background-image: url(./images/Hex_Ocean_1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+}
+
+.water-box{
+  background-image: url(./images/Hex_Ocean_1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.beach-e-box{
+  background-image: url(./images/Hex_Beach_E.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.grass-box{
+  background-image: url(./images/Hex_Grass_4.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.dessert-box{
+  background-image: url(./images/Hex_SandDunes_5.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.combo-box{
+  background-image: url(./images/Hex_Forest_1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.hvyforrest-box{
+  background-image: url(./images/Hex_Forest_1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.swamp-box{
+  background-image: url(./images/Hex_Swamp_4.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.hill-box{
+  background-image: url(./images/Hex_Hill_3.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.mountain-box{
+  background-image: url(./images/Hex_Mountain_3.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: chartreuse
+
+}
+
+.btnholder{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+}
+
+.menuspacer{
+  height: 100px;
+  width: 100%;
+}
+
+.boxofmaps{
+  margin: auto;
+  margin-bottom: 50px;
+ 
+}
+
+.bigboxofmaps{
+  margin: auto;
+  margin-bottom: 50px;
+  
+}
+
+.btn{
+  display: flex;
+  height: 50px;
+  border-radius: 25%;
+  border-color: silver;
+  border-width: 3px;
+  border-style: ridge;
+  background-color: black;
+  color: white;
+  margin: auto, 17px, auto, 20px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
