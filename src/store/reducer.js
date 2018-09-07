@@ -4,7 +4,7 @@ import * as actionTypes from './actionTypes'
 const initialState = {
   worldmaps : {},
   worldmap:{},
-  monsters:[]
+  isAuthenticated : false
 }
 
 const reducer = (state = initialState,action) => {
@@ -27,7 +27,20 @@ const reducer = (state = initialState,action) => {
     }
     default:
         return state;
-  }
+    case actionTypes.SUCCESS_AUTH:
+        return{
+            isAuthenticated : action.token != null ? true:false
+        }
+    case actionTypes.LOGOUT:
+        return{
+            isAuthenticated : false
+        }
+        
+  
+    }
+
+  
+
 }
 
 export default reducer

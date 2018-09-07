@@ -13,6 +13,8 @@ export class Menu extends Component {
         <div><NavLink to = "/join-map">Select Map</NavLink></div>
         <div><NavLink exact to = "/map">View Map</NavLink></div>
         <div><NavLink to = "/worldmap">World Map</NavLink></div>
+        <div><NavLink to = "/drawn-canvas">Canvas Map</NavLink></div>
+       
       </div>
     )
   }

@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Water} from './Water';
-import {Grass} from './Grass';
-import {Desert} from './Desert';
-import {Hvyforest} from './Hvyforest';
-import {Swamp} from './Swamp';
-import {Hill} from './Hill';
-import {Mountain} from './Mountain';
+import {Water} from './tiles/Water';
+import {Grass} from './tiles/Grass';
+import {Desert} from './tiles/Desert';
+import {Hvyforest} from './tiles/Hvyforest';
+import {Swamp} from './tiles/Swamp';
+import {Hill} from './tiles/Hill';
+import {Mountain} from './tiles/Mountain';
 
 
-var testmap =''
+var testmap = null;
 
 
 function BuildRows(props) {
 
     const {width,height,rawMapArray} = props
     var rows = []
+    //console.log(width,rawMapArray)
     for(var i = 0; i < height; i++){
         var rowType =''
-        if (i%2 == 0){
+        if (i%2 === 0){
             rowType = 'evenrow'
         }
         else{
@@ -30,7 +31,8 @@ function BuildRows(props) {
 }
 
 function RenderedRow(props) {
-    const {rowType, rawMapArray, currentRow} = props  
+    const {rowType, rawMapArray, currentRow} = props ;
+    //console.log(rawMapArray, currentRow)
 
     return(<div className={rowType}><BuildRow {...props} /></div>)
 }
@@ -44,6 +46,7 @@ function BuildRow(props) {
         let tileType = (rawMapArray[index].tileType)
         let tileComp = buildDiv(tileType,currentRow,index)
         let rowNumber = index
+        //console.log(rowNumber)
         tilesArray.push(tileComp)}
     return tilesArray
 }
@@ -57,7 +60,7 @@ function buildDiv(tileType,row,col){
         case 2:
         return (<Desert key={`desert_${row}_${col}`}/>);
         case 3:
-        return (<Hvyforest key={`hvyforest_${row}_${col}`}/>);
+        return (<Grass key={`grass_${row}_${col}`}/>);
         case 4:
         return (<Hvyforest key={`hvyforest_${row}_${col}`}/>);
         case 5:
@@ -77,11 +80,19 @@ const mapStateToProps = (state) => {
 
 class MapView extends Component {
 
-componentDidMount(){
-    const testmap = this.props.worldmaps.mapname;
-    console.log(testmap)
+componentWillMount(){
+    if (this.props.worldmaps === undefined){
+        //console.log("Going to pick a world");
+        this.props.history.push("/join-map");
+    }
+    else {
+    testmap = this.props.worldmaps.mapname;
+    //console.log(testmap)
 }
-    render(){       
+    
+}
+    render(){    
+        //console.log(testmap)   
         if (testmap == null)
         {
             return (
@@ -93,19 +104,16 @@ componentDidMount(){
                 </div>
             )
         }
-        else {
-        var tileType = 0
-        
-
-        return (
-            <div id="container">
-            <div className="app">
-                        <BuildRows width={this.props.worldmaps.mw } height = {this.props.worldmaps.mh} rawMapArray={this.props.worldmaps.mapfile} />      
+        else 
+        {
+            return (
+                <div id="container">
+                <div className="app">
+                            <BuildRows width={this.props.worldmaps.mw } height = {this.props.worldmaps.mh} rawMapArray={this.props.worldmaps.mapfile} />      
+                    </div>
                 </div>
-            </div>
-            )
+                )
         }
- //}
 }};
 
 export default connect(mapStateToProps)(MapView)

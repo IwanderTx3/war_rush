@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes'
+import axios from 'axios'
 
 export const addMap = (worldmap) => {
   return {
@@ -13,12 +14,16 @@ export const removeMap = index =>{
         index
     };
 };
-
-export const fetchMap = (gameid) => dispatch => {
-    fetch('http://localhost:3100/map/'+gameid) 
-    .then((response) => response.json())
-    .then((worldmap) => dispatch({
+export const fetchMap = (gameid,goseeit) => dispatch => {
+    axios.get('http://localhost:3100/map/'+gameid)
+    .then((worldmap) => {
+        dispatch({
         type : actionTypes.FETCH_MAP,
-        worldmap : worldmap
-}))};
+        worldmap : worldmap.data
+})
+return goseeit;
+})
+.then ( (goseeit) => {
+    goseeit()
+})};
 

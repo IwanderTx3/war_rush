@@ -14,7 +14,6 @@ margin-left: -32px;
   background-image: url(./images/war_rush_backdrop.jpg);
   color: white;
   background-size: cover;
-  z-index: -10; position:relative;
 }
 
 @font-face {
@@ -44,7 +43,7 @@ margin-left: -32px;
 .oddrow-overlay{
   display: flex;
   flex-direction: row;
-  width: 49088px;
+  width: 49344px;
   height: 64px;
   flex-wrap: nowrap;
   margin-top: -18px;
@@ -53,7 +52,7 @@ margin-left: -32px;
 .evenrow{
   display: flex;
   flex-direction: row;
-  width: 49024px;
+  width: 49344px;
   height: 64px;
   flex-wrap: nowrap;
   margin-top: -16px;
@@ -78,8 +77,9 @@ margin-left: -32px;
   display:flex;
   position :fixed;
   width: 100%;
-  height: 64px; 
+  height: 78px; 
   border-style: groove;
+  z-index: 1; 
 
 }
 
@@ -99,6 +99,7 @@ margin-left: -32px;
   width :100%;
   text-align: center;
   padding : 10px;
+  z-index: 1; 
 }
 
 .right-cap{
@@ -145,6 +146,74 @@ a {
   margin-right:64px
 }
 
+.unit_1-box{
+  background-image: url(./images/units/Hex_Tank_Blue_Texture_test1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: deepskyblue;
+  font-size: 32px;
+  text-align: center;
+}
+
+.unit_2-box{
+  background-image: url(./images/units/Jet_Test_2.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: deepskyblue;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+.unit_3-box{
+  background-image: url(./images/units/Hex_Eng_Blue_SizeTest.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: deepskyblue;
+  font-size: 32px;
+  text-align: center;
+}
+
+.unit_5-box{
+  background-image: url(./images/units/Hex_Tank_Green_TextureTest2.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px;
+  color: deepskyblue;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+.unit_4-box{
+  background-image: url(./images/Hex_Tank_Camera_Angle_2.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
+.unit_water-box{
+  background-image: url(./images/units/Hex_HeavyShip_1.png);
+  display: flex;
+  height: 128px;
+  width: 128px;
+  border-style:none;
+  margin-right:64px
+}
+
 .beach-e-box{
   background-image: url(./images/Hex_Beach_E.png);
   display: flex;
@@ -164,7 +233,7 @@ a {
 }
 
 .dessert-box{
-  background-image: url(./images/Hex_SandDunes_5.png);
+  background-image: url(./images/Hex_Hill_3.png);
   display: flex;
   height: 128px;
   width: 128px;
@@ -200,7 +269,7 @@ a {
 }
 
 .hill-box{
-  background-image: url(./images/Hex_Hill_3.png);
+  background-image: url(./images/Hex_Hill_6.png);
   display: flex;
   height: 128px;
   width: 128px;
@@ -258,4 +327,37 @@ a {
   margin-right: auto;
   margin-top: 25px;
   margin-bottom: 10px;
+}
+
+canvas{
+  border-style: solid;
+  border-width: 3px;
+  border-color: red;
+  position: fixed;
+  top: 0px;
+  left: -48px;
+  z-index: 0; 
+  overflow: scroll;
+}
+
+.loginFrame{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 50px;
+  border-style: groove;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.loginFrame input + input{
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.loginFrame button{
+  margin: auto;
+  width: 80%;
+  border-style: outset;
 }

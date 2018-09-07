@@ -27,15 +27,16 @@ componentDidMount(){
 
 populateMapList(){
     this.maplistService.getAll((maps) => {
+        
         this.setState({
-            maplist : maps
-        })
+            maplist : maps.data
+        }) 
     })
 }
 
 render(){
     let maplist = this.state.maplist
-      if(maplist.length === 0){
+      if(maplist.length === 0 || !maplist.length){
           return (<div> loading .........</div>)
       } else {
           let mapItems =maplist.map((map, index)=>{
@@ -45,7 +46,7 @@ render(){
           })
           return (
               <div className='boxofmaps'>
-              <label> Select Map </label>
+              <label> Select Game </label>
               <select id='mapchoice' onChange={this.update}  >{mapItems}</select>
               </div>
           )

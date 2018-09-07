@@ -10,12 +10,12 @@ export class Evenrow2 extends Component{
         <div className='hvyforrest-box'></div>
         <div className='hill-box'></div>
         <div className='hvyforrest-box'></div>
-        <div className='beach-e-box'></div>
         <div className='water-box'></div>
         <div className='water-box'></div>
-        <div className='water-box'></div>
-        <div className='water-box'></div>
-        <div className='water-box'></div>
+        <div className='hvyforrest-box'></div>
+        <div className='hvyforrest-box'></div>
+        <div className='hvyforrest-box'></div>
+        <div className='hvyforrest-box'></div>
         <div className='water-box'></div>
         <div className='water-box'></div>
         <div className='water-box'></div>

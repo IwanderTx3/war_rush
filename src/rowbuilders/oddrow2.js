@@ -15,8 +15,8 @@ export class Oddrow2 extends Component{
         <div className='water-box'></div>
         <div className='water-box'></div>
         <div className='water-box'></div>
-        <div className='water-box'></div>
-        <div className='water-box'></div>
+        <div className='grass-box'></div>
+        <div className='grass-box'></div>
         <div className='water-box'></div>
         <div className='water-box'></div>
                     <div className='oddcap'></div>
